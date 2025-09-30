@@ -4,8 +4,11 @@ let showingSelected = true;
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
-  // Load publications data
-  loadPublications();
+  // Load publications data only on pages that show publications
+  const hasPublicationsArea = !!document.getElementById('publications-container') || !!document.getElementById('toggle-publications');
+  if (hasPublicationsArea) {
+    loadPublications();
+  }
   
   // Initialize animation delays for sections
   const sections = document.querySelectorAll('section');
@@ -17,6 +20,61 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('toggle-publications');
   if (toggleButton) {
     toggleButton.addEventListener('click', togglePublications);
+  }
+
+  // Mobile nav toggle (kept minimal and CSS-driven)
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mainNav.classList.toggle('open');
+    });
+
+    // Close nav when a link is clicked (on mobile)
+    mainNav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A' && window.innerWidth <= 768) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
+      }
+    });
+
+    // Close nav when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
+      }
+    });
+
+    // Allow Escape to close the menu
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
+      }
+    });
+  }
+
+  // Highlight the current nav link
+  try {
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      // Normalize index.html and root
+      if (href === currentPath || (href === 'index.html' && currentPath === '')) {
+        a.classList.add('nav-active');
+      }
+      // Also handle anchors like index.html#about
+      if (href && href.split('#')[0] === currentPath) {
+        a.classList.add('nav-active');
+      }
+    });
+  } catch (e) {
+    // ignore
   }
 });
 
@@ -44,6 +102,7 @@ function loadPublications() {
 // Fallback if JSON loading fails
 function displayFallbackPublications() {
   const container = document.getElementById('publications-container');
+  if (!container) return; // nothing to do on pages without publications
   container.innerHTML = `Error loading publications.`;
 }
 
@@ -54,20 +113,21 @@ function togglePublications() {
   
   // Update button text
   const toggleButton = document.getElementById('toggle-publications');
-  toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
+  if (toggleButton) toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
   const toggleHeader = document.getElementById('toggle-header');
-  toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
+  if (toggleHeader) toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
 }
 
 // Render publications based on selection state
 function renderPublications(selectedOnly) {
   const publicationsContainer = document.getElementById('publications-container');
+  if (!publicationsContainer) return; // nothing to render on this page
   publicationsContainer.innerHTML = '';
-  
+
   const pubsToShow = selectedOnly ? 
     allPublications.filter(pub => pub.selected === 1) : 
     allPublications;
-  
+
   pubsToShow.forEach(publication => {
     const pubElement = createPublicationElement(publication);
     publicationsContainer.appendChild(pubElement);

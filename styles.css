@@ -13,12 +13,26 @@
 body {
   font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem;
   color: var(--text-color);
   background-color: var(--bg-color);
   font-weight: 300;
+}
+
+/* Smooth scrolling for in-page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation specific tweaks */
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: inline-block;
 }
 
 header {
@@ -28,6 +42,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative; /* allow absolutely-positioned mobile nav to sit under header */
 }
 
 .header-content {
@@ -69,6 +84,17 @@ nav {
   margin-top: 1.5rem;
 }
 
+/* Hide mobile nav toggle by default (show only in small viewports) */
+.nav-toggle {
+  display: none; /* hidden by default; shown with media query on small screens */
+}
+
+/* Ensure main nav is visible on wider screens */
+nav#main-nav {
+  display: block;
+  z-index: 50;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -90,6 +116,15 @@ nav a:hover, .social-links-header a:hover {
   color: var(--accent-color);
   background-color: rgba(74, 116, 185, 0.08);
   transform: translateX(var(--animation-offset));
+}
+
+/* Active navigation link indicator */
+nav a.nav-active, nav a.nav-active:hover {
+  color: var(--accent-color);
+  font-weight: 600;
+  background-color: rgba(74, 116, 185, 0.12);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transform: none; /* don't shift on active */
 }
 
 .social-links-header {
@@ -438,6 +473,106 @@ strong {
     align-items: center;
     text-align: center;
     gap: 1rem;
+  }
+
+  /* Mobile nav: hide full nav by default and show hamburger */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    margin: 0; /* remove center placement */
+    position: absolute; /* place in header corner */
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 1100;
+  }
+
+  .nav-toggle:focus {
+    outline: 2px solid rgba(74,116,185,0.25);
+    outline-offset: 2px;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-secondary);
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    top: -7px;
+  }
+
+  .hamburger::after {
+    top: 7px;
+  }
+
+  /* Hide the nav by default on mobile */
+  nav#main-nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* When nav is open, show it */
+  nav#main-nav.open {
+    display: block;
+    position: absolute;
+    /* place dropdown under hamburger in the top-right corner */
+    top: calc(0.6rem + 2.2rem); /* hamburger top + approximate height */
+    right: 0.6rem;
+    width: auto;
+    min-width: 160px;
+    max-width: calc(100% - 1.2rem);
+    background: var(--bg-color);
+    padding: 0.4rem 0.25rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1100;
+  }
+
+  nav#main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav#main-nav a {
+    padding: 0.5rem 0.75rem;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* When hamburger toggled to open state, rotate lines into an X */
+  .nav-toggle[aria-expanded="true"] .hamburger {
+    background-color: transparent;
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   /* Center social links on mobile */

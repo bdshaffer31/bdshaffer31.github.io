@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Research page description — replace me]">
+    <meta name="keywords" content="[keywords, research, publications]">
+    <meta name="author" content="[Author Name]">
+    <meta property="og:title" content="[Site Name] - Research">
+    <meta property="og:description" content="[Open Graph research description — replace me]">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[PAGE_URL]">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@[your_twitter_handle]">
+    <title>[Site Name] — Research</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+            <h1>[Name]</h1>
+            <p>CS PhD Student • [University]</p>
+            <div class="social-links-header">
+                <a href="#"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                <a href="#"><i class="fab fa-github"></i>GitHub</a>
+                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="mailto:email@university.edu"><i class="fas fa-envelope"></i>Email</a>
+                <a href="CV.pdf" download><i class="fas fa-file"></i>CV</a>
+            </div>
+        </div>
+        <div class="header-image">
+            <img src="images/profile.jpg" alt="Profile Photo">
+        </div>
+    </header>
+
+    <main>
+        <section id="research">
+            <h2>Research</h2>
+            <p>My research focuses on <strong>[Research Area 1] and [Research Area 2]</strong>. My recent works explore:</p>
+            <ul>
+                <li>[Research Topic 1] (<a href="#">[Conference 1]'24</a>, <a href="#">[Conference 2]'23</a>, <a href="#">[Conference 3]'22</a>)</li>
+                <li>[Research Topic 2] (<a href="#">[Conference 4]'24</a>, <a href="#">[Conference 5]'23</a>, <a href="#">[Conference 6]'23</a>)</li>
+                <li>[Research Topic 3] (<a href="#">[Conference 7]'24</a>, <a href="#">[Conference 8]'23</a>, <a href="#">[Conference 9]'23</a>)</li>
+                <li>[Research Topic 4] (<a href="#">[Journal 1]'22</a>, <a href="#">[Journal 2]'21</a>)</li>
+            </ul>
+
+            <h3 id="publications">Publications</h3>
+            <div class="publications-header">
+                <h2 id="toggle-header">Selected Publications</h2>
+                <button id="toggle-publications" class="toggle-publications">Show All</button>
+            </div>
+            <div id="publications-container">
+                <!-- Publications will be dynamically loaded here -->
+            </div>
+            <p>For a full list see the CV or the publications JSON file.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Last updated: [Month YYYY]. Template improved by <a href="https://ahmadfantatic.github.io">Ahmad Suleiman</a>. Template originally by <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang</a>.</p>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

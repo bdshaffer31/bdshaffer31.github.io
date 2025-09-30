@@ -1,10 +1,19 @@
-# Minimal Academic Website Template
+# Minimal Academic Website Template (Multi-Page Version)
 
-A clean, minimal academic website template, designed for researchers and PhD students. The design and source code are from [Yuhui Zhang](https://cs.stanford.edu/~yuhuiz/).
+This is a **multi-page extension** (by me [Ahmad D. Suleiman](https://ahmadfantastic.github.io)) original [Minimal Academic Website Template](https://cs.stanford.edu/~yuhuiz/) created by [Yuhui Zhang](https://cs.stanford.edu/~yuhuiz/).  
+The original design and source code are licensed under the MIT License.
+
+## What’s New in This Version
+
+- Multi-page layout with navigation bar
+- Improved organization for sections (About, Research, Publications, News, etc.)
+- Easier scalability for larger websites
+- Preserves the minimalist, academic-focused design of the original
+
 
 ![Screenshot](images/demo.jpg)
 
-## Features
+## Original Features
 
 - Minimalist, academic-focused design
 - Responsive layout
@@ -16,7 +25,9 @@ A clean, minimal academic website template, designed for researchers and PhD stu
 
 0. Clone this repository and `cd` into the directory
 1. Run `python -m http.server` and visit `http://localhost:8000`
-2. Replace placeholders marked with `[brackets]` in `index.html`
+2. Replace placeholders in HTML files marked like `[Name]`, `[University]`, `[Research Topic]`, `[YYYY]`, etc.
+3. Update meta tags in each page head (description, keywords, author, title, og:url).
+4. Add `CV.pdf` to the repo root if you want the "CV" nav item to download.
 3. Update profile photo in `images/profile.jpeg`
 4. Modify `publications.json` for your papers
 5. Customize sections as needed (About, Research, News, etc.)
@@ -35,8 +46,5 @@ A clean, minimal academic website template, designed for researchers and PhD stu
 
 ## License
 
-MIT License
-
----
-
-For a live example, visit [Yuhui Zhang's website](https://cs.stanford.edu/~yuhuiz/).
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+The original template was created by [Yuhui Zhang](https://cs.stanford.edu/~yuhuiz/).

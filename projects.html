@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Projects page description — replace me]">
+    <meta name="keywords" content="[projects, code, software]">
+    <meta name="author" content="[Author Name]">
+    <meta property="og:title" content="[Site Name] - Projects">
+    <meta property="og:description" content="[Open Graph projects description — replace me]">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[PAGE_URL]">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@[your_twitter_handle]">
+    <title>[Site Name] — Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+            <h1>[Name]</h1>
+            <p>CS PhD Student • [University]</p>
+            <div class="social-links-header">
+                <a href="#"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                <a href="#"><i class="fab fa-github"></i>GitHub</a>
+                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="mailto:email@university.edu"><i class="fas fa-envelope"></i>Email</a>
+                <a href="CV.pdf" download><i class="fas fa-file"></i>CV</a>
+            </div>
+        </div>
+        <div class="header-image">
+            <img src="images/profile.jpg" alt="Profile Photo">
+        </div>
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Summary of projects and research software. Projects are grouped into categories below.</p>
+
+            <div class="project-category">
+                <h3>Robotics</h3>
+                <ul>
+                    <li>Project A — short description and link to code.</li>
+                    <li>Project B — short description and link to code.</li>
+                </ul>
+            </div>
+
+            <div class="project-category">
+                <h3>Machine Learning</h3>
+                <ul>
+                    <li>Project C — short description and link to code.</li>
+                    <li>Project D — short description and link to code.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Last updated: [Month YYYY]. Template improved by <a href="https://ahmadfantatic.github.io">Ahmad Suleiman</a>. Template originally by <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang</a>.</p>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
