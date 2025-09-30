@@ -11,7 +11,7 @@ The original design and source code are licensed under the MIT License.
 - Preserves the minimalist, academic-focused design of the original
 
 
-![Screenshot](images/demo.jpg)
+![Demo](images/demo.gif)
 
 ## Original Features
 
