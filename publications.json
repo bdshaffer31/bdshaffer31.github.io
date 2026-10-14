@@ -13,7 +13,7 @@
       "links": {
         "pdf": "https://arxiv.org/pdf/2605.08436"
       },
-      "thumbnail": "images/meec.jpg"
+      "thumbnail": "images/meec.png"
     },
     {
       "title": "Structure-Preserving Learning Improves Geometry Generalization in Neural PDEs",
@@ -26,7 +26,7 @@
       ],
       "venue": "ICML 2026",
       "selected": 1,
-      "thumbnail": "images/geo-new.jpg",
+      "thumbnail": "images/geo-new.png",
       "links": {
         "pdf": "https://arxiv.org/pdf/2602.02788",
         "code": "https://github.com/bdshaffer31/Geo-NeW"
@@ -43,7 +43,7 @@
       ],
       "venue": "ICRA 2026",
       "selected": 1,
-      "thumbnail": "images/multi-robot.jpg",
+      "thumbnail": "images/multi-robot.png",
       "links": {
         "pdf": "https://arxiv.org/pdf/2509.14228"
       }
@@ -59,7 +59,7 @@
       ],
       "venue": "arXiv preprint (2025)",
       "selected": 1,
-      "thumbnail": "images/sensing.jpg",
+      "thumbnail": "images/sensing.png",
       "links": {
         "pdf": "https://arxiv.org/pdf/2509.10363"
       }
