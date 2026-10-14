@@ -1,52 +1,121 @@
 {
   "publications": [
     {
-      "title": "[Paper Title 1]",
+      "title": "A Meshfree Exterior Calculus for Generalizable and Data-Efficient Learning of Physics from Point Clouds",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11†",
-        "Author 12†"
+        "Benjamin D. Shaffer",
+        "Brooks Kinch",
+        "M. Ani Hsieh",
+        "Nathaniel Trask"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/1.jpg",
+      "venue": "NeurIPS 2026 (Spotlight)",
       "selected": 1,
-      "award": "",
       "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
+        "pdf": "https://arxiv.org/pdf/2605.08436"
       }
     },
     {
-      "title": "[Paper Title 2]",
+      "title": "Structure-Preserving Learning Improves Geometry Generalization in Neural PDEs",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11"
+        "Benjamin D. Shaffer",
+        "Shawn Koohy",
+        "Brooks Kinch",
+        "M. Ani Hsieh",
+        "Nathaniel Trask"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/2.jpg",
-      "selected": 0,
-      "award": "",
+      "venue": "ICML 2026",
+      "selected": 1,
       "links": {
-        "pdf": "#"
+        "pdf": "https://arxiv.org/pdf/2602.02788",
+        "code": "https://github.com/bdshaffer31/Geo-NeW"
+      }
+    },
+    {
+      "title": "Multi-robot Multi-source Localization in Complex Flows with Physics-Preserving Environment Models",
+      "authors": [
+        "Benjamin D. Shaffer",
+        "Victoria Edwards",
+        "Brooks Kinch",
+        "Nathaniel Trask",
+        "M. Ani Hsieh"
+      ],
+      "venue": "ICRA 2026",
+      "selected": 1,
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2509.14228"
+      }
+    },
+    {
+      "title": "Physics-Informed Sensor Coverage Through Structure Preserving Machine Learning",
+      "authors": [
+        "Benjamin D. Shaffer",
+        "Brooks Kinch",
+        "Joseph Klobusicky",
+        "M. Ani Hsieh",
+        "Nathaniel Trask"
+      ],
+      "venue": "arXiv preprint (2025)",
+      "selected": 1,
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2509.10363"
+      }
+    },
+    {
+      "title": "Structure-Preserving Digital Twins via Conditional Neural Whitney Forms",
+      "authors": [
+        "Brooks Kinch",
+        "Benjamin D. Shaffer",
+        "Elizabeth Armstrong",
+        "Michael Meehan",
+        "John Hewson",
+        "Nathaniel Trask"
+      ],
+      "venue": "arXiv preprint (2025)",
+      "selected": 1,
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2508.06981",
+        "code": "https://github.com/PIMILab/cnwf"
+      }
+    },
+    {
+      "title": "Spectrally Informed Learning of Fluid Flows",
+      "authors": [
+        "Benjamin D. Shaffer",
+        "Jeremy R. Vorenberg",
+        "M. Ani Hsieh"
+      ],
+      "venue": "Chaos 35(3), 2025",
+      "selected": 0,
+      "links": {
+        "paper": "https://doi.org/10.1063/5.0235257"
+      }
+    },
+    {
+      "title": "Generalizable Turbulent Flow Forecasting for Adaptive Optics Control",
+      "authors": [
+        "Benjamin D. Shaffer",
+        "Jeremy R. Vorenberg",
+        "Christopher C. Wilcox",
+        "Austin J. McDaniel"
+      ],
+      "venue": "Applied Optics 62(23), 2023",
+      "selected": 0,
+      "links": {
+        "paper": "https://doi.org/10.1364/AO.486236"
+      }
+    },
+    {
+      "title": "Dynamic Mode Decomposition Based Predictive Model Performance on Supersonic and Transonic Aero-Optical Wavefront Measurements",
+      "authors": [
+        "Benjamin D. Shaffer",
+        "Austin J. McDaniel",
+        "Christopher C. Wilcox",
+        "Edwin S. Ahn"
+      ],
+      "venue": "Applied Optics 60(25), 2021",
+      "selected": 0,
+      "links": {
+        "paper": "https://doi.org/10.1364/AO.426031"
       }
     }
   ]
